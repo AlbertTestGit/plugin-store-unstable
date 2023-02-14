@@ -2,13 +2,13 @@ version: "3.9"
 
 services:
   adminer:
-    container_name: adminer
+    container_name: adminer_wp
     image: adminer
     ports:
-      - "8080:8080"
+      - "8085:8080"
   
   wordpress:
-    container_name: wordpress
+    container_name: wordpress_wp
     image: mailpoet/wordpress:wp-6.1_php8.1_20201122.1
     ports:
       - "80:80"
@@ -25,7 +25,7 @@ services:
       - wpdb
 
   wpdb:
-    container_name: mysql
+    container_name: mysql_wp
     image: mysql:8.0.32
     ports:
       - "3306:3306"
